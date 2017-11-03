@@ -1,0 +1,33 @@
+.d {
+  background-color: black;
+  width: 200px;
+  height: 200px;
+  transition: 1.5s ease;
+  display: inline-block;
+  margin: -2px;
+  color: white;
+}
+
+div:hover {
+  opacity: 0;
+  transition: 80ms ease;
+}
+
+img {
+  width: 100px;
+  position: absolute;
+  z-index: -3;
+  opacity: 1;
+}
+
+#guy_container {
+  height: 100px;
+  width: 100px;
+  z-index: 3;
+  position: absolute;
+}
+
+h1 {
+  font-style: italic;
+  margin: auto 0;
+}
