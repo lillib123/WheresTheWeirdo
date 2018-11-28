@@ -8,11 +8,19 @@
   <title>Where's the Weirdo?</title>
 </head>
 <body>
+  <div class="barrier-page">
+    <h1 class="barrier-text">Welcome.</h1>
+    <label for="easy">Easy<input type="radio" value="1000" id="easy" name="difficulty-option" class="difficulty-option"></label>
+    <label for="medium">Normal<input type="radio" value ="1500" id="medium" name="difficulty-option" class="difficulty-option"></label>
+    <label for="hard">Hard<input type="radio" value="2000" id="hard" name="difficulty-option" class="difficulty-option"></label>
+    <button class="barrier-button">ENTER</button>
+  </div>
+
   <h1>Where's the Weirdo?</h1>
   <h3 class="win-counter">Wins: 0</h3>
-<img id = "guy" src="guy.jpg">
-<div id = "guy_container"></div>
+  <img id = "guy" src="guy.jpg">
+  <div id = "guy_container"></div>
 
-<script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

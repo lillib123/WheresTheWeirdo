@@ -8,7 +8,7 @@
   color: white;
 }
 
-div:hover {
+div.d:hover {
   opacity: 0;
   transition: 80ms ease;
 }
@@ -34,4 +34,21 @@ img {
 h1 {
   font-style: italic;
   margin: auto 0;
+}
+
+.barrier-page {
+  position: absolute;
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+  display: inline-block;
+}
+.barrier-text {
+  text-align: center;
+}
+.barrier-button {
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: #fff;
 }

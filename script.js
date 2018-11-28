@@ -1,11 +1,19 @@
 let wins = 0;
+let difficultySelected = false;
 
-setupBlocks(1000);
-
+// event listeners
 $('#guy_container').on('click', function() {
   move_guy();
 })
+$('.barrier-button').on('click', function() {
+  let numberOfBlocks = $('.difficulty-option:checked').val();
+  if (!difficultySelected) {
+    setupBlocks(numberOfBlocks);
+    difficultySelected = true;
+  }
+  $('.barrier-page').remove();
 
+})
 // function definitions
 function setupBlocks(numberOfBlocks) {
   for (let i=1; i<=numberOfBlocks; i++) {
@@ -15,13 +23,13 @@ function setupBlocks(numberOfBlocks) {
 
 function move_guy() {
   counter();
-  let left_margin = Math.floor((Math.random() * 1000) + 1);
-  $('#guy').css('margin-left', left_margin + 'px');
-  $('#guy_container').css('margin-left', left_margin + 'px');
+  let leftMargin = Math.floor((Math.random() * 100) + 1);
+  $('#guy').css('margin-left', leftMargin + 'wv');
+  $('#guy_container').css('margin-left', leftMargin + 'wv');
 
-  let top_margin = Math.floor((Math.random() * 1000) + 1);
-  $('#guy').css('margin-top', top_margin + 'px');
-  $('#guy_container').css('margin-top', top_margin + 'px');
+  let topMargin = Math.floor((Math.random() * 100) + 1);
+  $('#guy').css('margin-top', topMargin + 'vh');
+  $('#guy_container').css('margin-top', topMargin + 'vh');
 }
 
 function counter() {
