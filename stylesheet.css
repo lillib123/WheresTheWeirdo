@@ -27,6 +27,10 @@ img {
   position: absolute;
 }
 
+#guy {
+  width: 300px;
+}
+
 h1 {
   font-style: italic;
   margin: auto 0;

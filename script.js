@@ -1,39 +1,37 @@
+let wins = 0;
+$('.win-container').text('Wins: ' + wins);
 
-
-var guy = document.getElementById("guy");
-var guy_container = document.getElementById("guy_container");
-guy.style.width = "300px";
-var wins = 0;
-
-move_guy();
+$('#guy_container').on('click', function() {
+  move_guy();
+})
 
 function move_guy() {
 
   counter();
   var left_margin = Math.floor((Math.random() * 1000) + 1);
-  guy.style.marginLeft = left_margin + "px";
-  guy_container.style.marginLeft = left_margin + "px";
+  $('#guy').css('margin-left', left_margin + 'px');
+  $('#guy_container').css('margin-left', left_margin + 'px');
 
   var top_margin = Math.floor((Math.random() * 1000) + 1);
-  guy.style.marginTop = top_margin + "px";
-  guy_container.style.marginTop = top_margin + "px";
+  $('#guy').css('margin-top', top_margin + 'px');
+  $('#guy_container').css('margin-top', top_margin + 'px');
 }
 
-function counter() {
+function counter() {  $('.win-counter').text('Wins: ' + wins);
   if (wins === 0){
-    guy.style.width = "150px";
+    $('#guy').css('width', '150px');
     wins = wins + 1;
   } else if (wins === 1) {
-    guy.style.width = "100px";
+    $('#guy').css('width', '120px');
     wins = wins + 1;
   } else if (wins === 2) {
-    guy.style.width = "75px";
+    $('#guy').css('width', '90px');
     wins = wins + 1;
   } else if (wins === 3) {
-    guy.style.width = "50px";
+    $('#guy').css('width', '60px');
     wins = wins + 1;
   }else if (wins === 4) {
-    guy.style.width = "25px";
+    $('#guy').css('width', '30px');
     wins = wins + 1;
   } else return;
 }
